@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Code
         uses: actions/checkout@v1
-      - name: test
+      - name: all in one
         run: |
           make test
           docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
