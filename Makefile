@@ -1,3 +1,3 @@
-.PHONY: test
+.PHONY: all-in-one
 all-in-one:
-	docker build -f ./Dockerfile . -t wechat
+	docker build -f ./Dockerfile . -t test

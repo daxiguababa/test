@@ -61,7 +61,7 @@ jobs:
         uses: actions/checkout@v1
       - name: all in one
         run: |
-          make test
+          make all-in-one
           docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker tag test:latest ${{ secrets.DOCKER_USERNAME }}/test:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/test:latest
