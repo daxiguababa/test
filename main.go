@@ -11,7 +11,7 @@ func main() {
 
 	r.StaticFS("/", http.Dir("./html/static/page"))
 
-	if err := r.Run(":8181"); err != nil {
+	if err := r.Run(":8182"); err != nil {
 		log.Fatalln("启动服务失败：", err.Error())
 	}
 }
