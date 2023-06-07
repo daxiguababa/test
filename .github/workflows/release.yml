@@ -55,8 +55,8 @@ jobs:
         run: |
           make all-in-one
           docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag demo:latest ${{ secrets.DOCKER_USERNAME }}/demo:latest
-          docker tag demo:latest ${{ secrets.DOCKER_USERNAME }}/demo:${{ env.RELEASE_VERSION }}
+          docker tag test:latest ${{ secrets.DOCKER_USERNAME }}/test:latest
+          docker tag test:latest ${{ secrets.DOCKER_USERNAME }}/test:${{ env.RELEASE_VERSION }}
 
-          docker push ${{ secrets.DOCKER_USERNAME }}/demo:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/demo:${{ env.RELEASE_VERSION }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/test:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/test:${{ env.RELEASE_VERSION }}
